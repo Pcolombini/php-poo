@@ -29,9 +29,9 @@ class ContaBanco
 
     public function fecharConta()
     {
-        if ($this->getSaldo() > 0) {
+        if ($this->saldo > 0 || $this->saldo > '0') {
             return "Ainda possui saldo, para encerrar, saque!<br>";
-        } else if ($this->getSaldo() < 0) {
+        } else if ($this->saldo < 0 || $this->saldo < '0') {
             return "Deposite o valor do saldo devedor!<br>";
         } else {
             $this->status = false;

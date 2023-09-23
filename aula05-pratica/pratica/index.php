@@ -28,6 +28,12 @@
       
                 echo $cc -> getSaldo();
                 $cc->sacar(150.00);
+
+                $saldo = $cc->getSaldo();
+
+                echo $cc->fecharConta();
+                $cc->depositar(20.00);
+                echo $cc->fecharConta();
             ?>
 
         </section>
